@@ -13,7 +13,7 @@ class Usuario {
 
    }
 
-   public function setIdusuario(){
+   public function setIdusuario($value){
          $this->idusuario = $value;
 
    }
@@ -23,7 +23,7 @@ class Usuario {
 
    }
 
-   public function setDeslogin(){
+   public function setDeslogin($value){
          $this->deslogin = $value;
 
    }
@@ -33,7 +33,7 @@ class Usuario {
 
    }
 
-   public function setDessenha(){
+   public function setDessenha($value){
          $this->dessenha = $value;
 
    }
@@ -42,7 +42,7 @@ class Usuario {
 
    }
 
-   public function setDtcadastro(){
+   public function setDtcadastro($value){
          $this->dtcadastro =$value;
 
    }
@@ -51,7 +51,7 @@ class Usuario {
 
          $sql = new sql();
 
-         $results = $sql->select("SELECT * FROM tb_ususario WHERE idusuario = :ID", array(":ID"=>$id));
+         $results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(":ID"=>$id));
 
         if (count($results) > 0){
 
@@ -72,7 +72,8 @@ class Usuario {
               "idusuario"=>$this->getIdusuario(),
               "deslogin"=>$this->getDeslogin(),
               "dessenha"=>$this->getDessenha(),
-              "dtcadastro"=>$this->getDtcadastro()));//->format("d/m/Y H:i:s")));
+              "dtcadastro"=>$this->getDtcadastro()//->format("d/m/Y H:i:s"//
+            ));
 
 
     
