@@ -23,8 +23,23 @@ require_once("config.php");
 
 
 //Carrega um usuário usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("jheff", "7");
+//echo $usuario;
+
+
+// INSERT, insere um novo usuário e retorna o usuário criado com id e data de cadastro.
+//$aluno = new Usuario("aluno11", "54321");
+//$aluno->insert();
+//echo $aluno;
+
+
+//atualizar o usuários
+
 $usuario = new Usuario();
-$usuario->login("jheff", "7");
+$usuario->loadById(8);
+$usuario->update("RaquelSilva", "#1234admin");
+
 echo $usuario;
 
 ?>
